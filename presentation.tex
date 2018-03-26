@@ -1,0 +1,63 @@
+\documentclass{beamer}
+
+% set font
+\usepackage{fontspec}
+\setsansfont{Fira Sans}
+\setmonofont{Fira Mono}
+\newfontfamily\cyrillicfont{Fira Sans}
+
+% set lang
+\usepackage{polyglossia}
+\setdefaultlanguage[spelling=modern]{russian}
+\setotherlanguage{english}
+
+% set theme
+\usetheme{metropolis}
+
+% pakages
+\usepackage{caption}
+
+% set info
+\title{Биометическая аутентификация с помощью нейроинтерфейса}
+\author{Студент: Сластен Т.Д. \\ Руководители: Боршевников А.Е., Кленин А.С.}
+\institute{Б8303а Прикладная математика и информатика}
+\date{}
+
+% fonts
+
+\begin{document}
+
+\maketitle
+
+% 1 slide
+\begin{frame}{Технология проведения эксперимента}
+	\begin{columns}[T]
+  		\begin{column}{.6\textwidth}
+     		\begin{block}{Процесс стимуляции}
+				Стимуляция выглядит, как поочередно меняющиеся цифры от "0" до "9".
+				Пользователь выбирает 1 или 2 символа и при их появлении концентрируется на них.
+				Данные символы являются "мысленным" паролем.
+    		\end{block}
+    	\end{column}
+    	\begin{column}{.4\textwidth}
+    		\begin{figure}
+    			\includegraphics[width=\textwidth]{img/0_4.png}
+    			\caption{Фрагмент визуальной стимуляции}
+    		\end{figure}
+    	\end{column}
+  	\end{columns}
+\end{frame}
+
+% 2 slide
+\begin{frame}{Выбор биометрических параметров}
+	К сигналу ЭЭГ применяется быстрое преобразование Фурье.
+	\begin{gather*}
+		\overline{a_i} = \{ a_{ij} \}, \\
+		a_{ij} = \max_{a_i}|a| \cdot cos(arg \; a),\; 1 < i \leq I,\; 1 \leq j \leq J
+	\end{gather*}
+	$\overline{a_i}$ - вектор биометрических данных, используемый в нейросетевом преобразователе \\
+	$I$ - общее кол-во электродов \\
+	$J$ - кол-во выбираемых коэффициентов
+\end{frame}
+
+\end{document}
