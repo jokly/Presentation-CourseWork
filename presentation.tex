@@ -15,6 +15,7 @@
 \usetheme{metropolis}
 
 % pakages
+\usepackage{subfiles}
 \usepackage{caption}
 
 % set info
@@ -30,51 +31,10 @@
 \maketitle
 
 \section{Введение}
+\subfile{slides/1}
+\subfile{slides/2}
+\subfile{slides/3}
 
-% 1 slide
-\begin{frame}{Технология проведения эксперимента}
-	\begin{columns}[T]
-  		\begin{column}{.6\textwidth}
-     		\begin{block}{Процесс стимуляции}
-				Стимуляция выглядит, как поочередно меняющиеся цифры от "0" до "9".
-				Пользователь выбирает 1 или 2 символа и при их появлении концентрируется на них.
-				Данные символы являются "мысленным" паролем.
-    		\end{block}
-    	\end{column}
-    	\begin{column}{.4\textwidth}
-    		\begin{figure}
-    			\includegraphics[width=\textwidth]{img/0_4.png}
-    			\caption{Фрагмент визуальной стимуляции}
-    		\end{figure}
-    	\end{column}
-  	\end{columns}
-\end{frame}
-
-% 2 slide
-\begin{frame}{Выбор биометрических параметров}
-	К сигналу ЭЭГ применяется быстрое преобразование Фурье.
-	Далее отбрасываются коэффициенты, не удовлетворяющие условию:
-	\begin{gather*}
-		10^{\circ} < arg \; a_i < 90^{\circ}
-	\end{gather*}
-	И формируются следующие векторы:
-	\begin{gather*}
-		\overline{a_i} = \{ a_{ij} \}, \\
-		a_{ij} = \max_{a_i}|a| \cdot cos(arg \; a),\; 1 < i \leq I,\; 1 \leq j \leq J
-	\end{gather*}
-	$\overline{a_i}$ - вектор биометрических данных, используемый в нейросетевом преобразователе \\
-	$I$ - общее кол-во электродов \\
-	$J$ - кол-во выбираемых коэффициентов
-\end{frame}
-
-% 3 slide
-\begin{frame}{Цель}
-	\begin{enumerate}
-		\item Изучение требований линейки стандартов ГОСТ Р 52633.0.
-		\item Написание нейросетевого преобразователя «Биометрия – код доступа»,
-			использующий данные электроэнцефалограммы мозга.
-		\item Проведение исследований с преобразователем «Биометрия – код доступа», его оптимизация.
-	\end{enumerate}
-\end{frame}
+\section{Основная часть}
 
 \end{document}
