@@ -1,0 +1,16 @@
+\begin{frame}{Обучение первого слоя}
+    Вычисление весовых коэффициентов для l-ого нейрона
+    \begin{gather*}
+        Q(a_{ij}) = \frac{|E_{Alien}(a_{ij}) - E_{Ours}(a_{ij})|}{\sigma_{Ours}(a_{ij})} \\
+        w_{ij} = \frac{Q(a_{ij})}{\sigma_{Alien}(a_{ij})}
+    \end{gather*}
+    $E$ - среднее значение \\
+    $\sigma$ - дисперсия биометрических данных
+    \begin{gather*}
+        sign(w_{ij}) = 
+        \begin{cases}
+            sign(E_{Ours}(a_{ij}) - E_{Alien}(a_{ij})),\; y_{1,l}=1 \\
+            -sign(E_{Ours}(a_{ij}) - E_{Alien}(a_{ij})),\; y_{1,l}=-1            
+        \end{cases}
+    \end{gather*}
+\end{frame}
