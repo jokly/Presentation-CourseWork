@@ -1,6 +1,6 @@
 \begin{frame}{Нейрон первого слоя}
     \begin{gather*}
-        x_{1,l} = \sum_{i=1}^{I} \Delta_i \cdot \sum_{j=1}^{J}M_{ij}\cdot a_{ij} \\
+        x_{1,l} = \sum_{i=1}^{I} \Delta_{l,i} \cdot \sum_{j=1}^{J}w_{l,ij}\cdot a_{l,ij} \\
         y_{1,l} = \frac{2}{1 + e^{x_{1,l}}} - 1 \\
         t_l = f_1(y_{1,l}) = 
         \begin{cases}   
@@ -10,7 +10,7 @@
         ,\; l = \overline{1,L}
     \end{gather*}
     $x_{1,l}$ - результат сумматора l-ого нейрона \\
-    $\Delta_i$ - коэффициент использования вектора $\overline{a}_i$ \\
+    $\Delta_{l,i}$ - коэффициент использования вектора $\overline{a}_i$ \\
     $y_{1,l}$ - предаточная функция \\
     $f_1(y_{1,l})$ - решающее правило
 \end{frame}
