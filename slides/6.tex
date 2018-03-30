@@ -1,6 +1,6 @@
 \begin{frame}{Нейрон второго слоя}
     \begin{gather*}
-        x_{2,r} = \sum_{l=1}^{L} \Delta_{r,l}\cdot W_{r,l}\cdot t_l \\
+        x_{2,r} = \sum_{l=1}^{L} \Delta_{r,l}\cdot W_{l}\cdot t_l \\
         y_{2,r} = \frac{2}{1 + e^{x_{2,r}}} - 1 \\
         k_r = f_2(y_{2,r}) = 
         \begin{cases}
