@@ -1,12 +1,11 @@
 \begin{frame}{Общая структура нейросетевого преобразователя}
     \begin{gather*}
-        NET(\overline{a}_i, \overline{w}_i, \overline{W}_r, \overline{net}_l, \Delta_r) = \overline{K}_{rest},\\
+        NET(\overline{a}_i, \overline{w}_i, \overline{W}_r, \Delta) = \overline{K}_{rest},\\
         1 \leq i \leq I, 1 \leq l \leq L, 1 \leq r \leq R. \\
         \overline{K}_{rest}=\{ k_r \},    
     \end{gather*}
-    $\overline{net}_l$ - вектор связей нейрона $l$; \\
     $\overline{w}_i$ - вектор весов 1-ого слоя; \\
     $\overline{W}_r$ - вектор весов 2-ого слоя; \\
-    $\Delta_r$ - коэффициент использования; \\
+    $\Delta$ - коэффициент использования; \\
     $\overline{K}_{rest}$ - восстанавливаемый преобразователем ключ.        
 \end{frame}
